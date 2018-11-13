@@ -1,1 +1,1 @@
-worker: python Pennridgebot.py
+worker: python Pennridgebot.py client.run(os.getenv('Token'))
