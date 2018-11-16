@@ -1,7 +1,10 @@
 import discord
+from discord.ext.commands import Bot
+from discord.ext import commands
+import asyncio
+import time
 import json
 import os
-from discord.ext import commands
 
 Token = 'NTA1MTYxNjUyNDMwMTc2MjU3.Drd8ig.LJGEk5QhdHJJ1iQ3h22BHGkZZqg'
 client = commands.Bot(command_prefix = '~')
