@@ -51,4 +51,26 @@ async def level_up(users, user, channel):
         await client.send_message(channel, '{} has leveled up to level {}'.format(user.mention, lvl_end))
         users[user.id]['level'] = lvl_end
 
+@client.event
+async def on_message(message):
+    if message.content.upper().startswith('~PING'):
+        userID = message.author.id
+        await client.send_message(message.channel, "<@%s> Pong!" % (userID))
+    if message.content.upper().startswith('~ECHO'):
+        args = message.content.split(" ")
+        await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
+    if message.content.upper().startswith('~ANNOUNCE'):
+        if "512730303241125890" in [role.id for role in message.author.roles]:
+            args = message.content.split(" ")
+            await client.send_message(client.get_channel('505106539019894805'), "%s" % (" ".join(args[1:])))
+        else:
+            await client.send_message(message.channel, "You don't have permission to use that command")  
+    if message.content.upper().startswith('~GENERAL'):
+        if "512730303241125890" in [role.id for role in message.author.roles]:
+            args = message.content.split(" ")
+            await client.send_message(client.get_channel('505101869652246531'), "%s" % (" ".join(args[1:])))
+        else:
+            await client.send_message(message.channel, "You don't have permission to use that command")  
+
+            
 client.run (Token)
