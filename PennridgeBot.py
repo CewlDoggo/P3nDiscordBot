@@ -6,7 +6,7 @@ import time
 import json
 import os
 
-Token = 'NTA1MTYxNjUyNDMwMTc2MjU3.Drd8ig.LJGEk5QhdHJJ1iQ3h22BHGkZZqg'
+Token = 'NTA1MTYxNjUyNDMwMTc2MjU3.DtCipw.orDniRKUGIGLoilqiZlSqu-NUEg'
 client = commands.Bot(command_prefix = '~')
 os.chdir(r'C:\Users\Howdy\Desktop\Coding\Bots\Pennridge bot')
 
